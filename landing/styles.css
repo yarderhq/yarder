@@ -316,8 +316,39 @@ h3 {
   transform: scaleX(1);
 }
 
-.nav-cta {
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-left: auto;
+}
+
+.github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.github:hover {
+  color: var(--text);
+}
+
+.github svg {
+  display: block;
+  flex: none;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.nav-cta {
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--line-2);
   font-family: var(--mono);
@@ -1531,6 +1562,19 @@ thead .col-own {
   color: var(--muted);
 }
 
+.closer-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.answer .github {
+  display: inline-flex;
+  vertical-align: -0.15em;
+  margin: 0 0.15em;
+}
+
 /* --- Footer --- */
 
 .footer {
@@ -1543,6 +1587,7 @@ thead .col-own {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem 2rem;
 }
 
@@ -1550,8 +1595,17 @@ thead .col-own {
   margin: 0;
 }
 
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1.25rem;
   margin-left: auto;
 }
@@ -1629,7 +1683,7 @@ thead .col-own {
     display: flex;
   }
 
-  .nav-cta {
+  .nav-actions {
     margin-left: 0;
   }
 
