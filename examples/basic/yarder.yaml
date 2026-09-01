@@ -1,0 +1,25 @@
+name: basic
+
+services:
+  web:
+    command: node index.js
+    dir: ./web
+    port: 3007
+    depends_on:
+      - api
+
+  api:
+    command: node index.js
+    dir: ./api
+    port: 4007
+    health: /health
+    depends_on:
+      - postgres
+
+  # Uncomment this to use a postgres database
+  # postgres:
+  #   type: postgres
+
+  # Uncomment this to use a redis cache
+  # redis:
+  #   type: redis

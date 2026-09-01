@@ -1,0 +1,11 @@
+node_modules
+.yarder
+*.tgz
+coverage
+.cursor
+.claude
+landing
+examples
+docs
+agent-transcripts
+**/*.test.ts

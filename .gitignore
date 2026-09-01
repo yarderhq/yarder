@@ -1,0 +1,20 @@
+node_modules/
+build/
+dist/
+coverage/
+*.tgz
+.DS_Store
+*.log
+.env*
+!.env.example
+.yarder/
+*.db
+
+# Local-only (not part of the public product repo)
+.cursor/
+.claude/
+/docs/
+/naming/
+/legacy/
+/next-steps.md
+/yarder-product-direction.md
