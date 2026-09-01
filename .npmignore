@@ -4,7 +4,6 @@ node_modules
 coverage
 .cursor
 .claude
-landing
 examples
 docs
 agent-transcripts
