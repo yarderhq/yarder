@@ -123,18 +123,22 @@ p:last-child {
   pointer-events: none;
 }
 
+.rig.is-compact {
+  z-index: 3;
+}
+
 .rig-guys path {
   fill: none;
   stroke: var(--line-2);
   stroke-width: 1;
   stroke-linecap: round;
-  opacity: 0.38;
+  opacity: 0.5;
   vector-effect: non-scaling-stroke;
 }
 
 .rig-guys path.is-landing {
-  stroke: color-mix(in srgb, var(--brand) 38%, var(--line-2));
-  opacity: 0.55;
+  stroke: color-mix(in srgb, var(--brand) 42%, var(--line-2));
+  opacity: 0.62;
 }
 
 .rig-mast {
@@ -174,6 +178,18 @@ p:last-child {
 .rig-trees use,
 .mast-trees use {
   vector-effect: none;
+}
+
+.rig.is-compact .rig-guys path {
+  opacity: 0.46;
+}
+
+.rig.is-compact .rig-guys path.is-landing {
+  opacity: 0.62;
+}
+
+.rig.is-compact .rig-mast .back-guy {
+  opacity: 0.28;
 }
 
 :focus-visible {
@@ -400,6 +416,12 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (max-width: 59.99rem) {
+  .hero-grid {
+    padding-right: calc(var(--gutter) + 4.25rem);
+  }
 }
 
 .release-line {
