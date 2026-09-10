@@ -2,9 +2,7 @@
 
 Run your Node stack as native processes from one `yarder.yaml`. Local GUI. Deploy to a VPS you own. No Docker.
 
-This is an early **0.1.1**. The CLI and yaml model work; polish and extras will move.
-
-Source: [github.com/yarderhq/yarder](https://github.com/yarderhq/yarder).
+I built this because local development and self-hosting the same app felt like two different jobs — and tools like Coolify meant Docker and a PHP control plane I did not want. Early **0.1.2**. It works for the stacks I run; expect rough edges.
 
 ## Requirements
 
@@ -85,8 +83,6 @@ yarder status --env production
 yarder --help
 ```
 
-
-
 ## Deploy to a VPS
 
 Target: Ubuntu 22.04/24.04 you can SSH into with key-based auth. OpenSSH on the laptop is enough (including Windows); WSL is not required for `yarder deploy`.
@@ -108,8 +104,10 @@ What that does:
 
 Open ports 80 and 443 on the VPS. `.env` is copied with the project (not encrypted at rest). Production processes use PM2 `autorestart`.
 
+## Known gaps
+
+Not built yet: git push deploys, rollback, backups, monitoring/alerts, encrypted secrets at rest. Fix what blocks real apps first.
+
 ## License
 
-yarder is licensed under the [GNU Affero General Public License v3.0](LICENSE) only.
-
-Apps you run or deploy *with* yarder stay yours. Using this CLI does not place your application under the AGPL. Contributions require signing the [CLA](CLA.md); see [CONTRIBUTING.md](CONTRIBUTING.md).
+[MIT](LICENSE). Use it however you want. PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). No CLA.
